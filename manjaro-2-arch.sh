@@ -108,8 +108,8 @@ echo 'DISTRIB_ID=Arch' >> /etc/lsb-release
 echo 'DISTRIB_RELEASE=rolling' >> /etc/lsb-release
 echo 'DISTRIB_DESCRIPTION="Arch Linux"' >> /etc/lsb-release
 
-sudo pacman -Syyu -y
-sudo pacman -Scc && sudo pacman -S linux-lts linux-lts-headers acpi_call-dkms tlp pacman-mirrors grub -y
+sudo pacman -Syyu 
+sudo pacman -Scc && sudo pacman -S linux-lts linux-lts-headers acpi_call-dkms tlp pacman-mirrors grub 
 
 sed -i s/Manjaro/Arch/g /etc/default/grub
 update-grub
