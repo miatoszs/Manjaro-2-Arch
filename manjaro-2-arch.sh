@@ -84,7 +84,7 @@ echo 'Server = https://quantum-mirror.hu/mirrors/pub/archlinux/$repo/os/$arch' >
 echo 'Server = https://super.quantum-mirror.hu/mirrors/pub/archlinux/$repo/os/$arch' >> /etc/pacman.d/mirrolist
 
 sudo cp /etc/manjaro-release /etc/manjaro-release.bak
-sudo pacman -Rns --noconfirm --needed manjaro-release
+sudo pacman -Rns --noconfirm manjaro-release
 sudo mv /etc/pacman-mirrors.conf /etc/pacman-mirrors.conf.bak
 
 
@@ -108,8 +108,8 @@ echo 'DISTRIB_ID=Arch' >> /etc/lsb-release
 echo 'DISTRIB_RELEASE=rolling' >> /etc/lsb-release
 echo 'DISTRIB_DESCRIPTION="Arch Linux"' >> /etc/lsb-release
 
-sudo pacman -Syyu --noconfirm --needed
-sudo pacman -Scc --noconfirm --needed && sudo pacman -S linux-lts linux-lts-headers acpi_call-dkms tlp pacman-mirrors grub 
+sudo pacman -Syyu --noconfirm
+sudo pacman -Scc --noconfirm && sudo pacman -S linux-lts linux-lts-headers acpi_call-dkms tlp pacman-mirrors grub 
 
 sed -i s/Manjaro/Arch/g /etc/default/grub
 update-grub
